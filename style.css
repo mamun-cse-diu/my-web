@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #4a4a4a; /* Darker background for better contrast */
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.sidebar h1 {
+    font-size: 24px; /* Slightly larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0; /* Reset padding for list */
+}
+
+.sidebar nav ul li {
+    margin: 15px 0; /* Reduced margin for a more compact look */
+}
+
+.sidebar nav ul li a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px; /* Padding around links for better click area */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* Maintain white text on hover */
+}
+
+
+.main-content {
+    margin-left: 350px;
+    padding: 50px;
+    padding-top: 0px;
+    margin-right: 0px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+.social {
+    margin: 0 auto;
+    width: auto;
+    text-align: inherit;
+    margin-top: 20px;
+}
+
+section {
+    margin: 50px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #dccaca;
+    text-decoration: none;
+}
+
+.hero {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    position: relative;
+    color: #fff;
+}
+
+.hero span {
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.icon-btn {
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 70px;
+    border-radius: 45px;
+    display: inline-block;
+    margin: 4px;
+}
+
+.github {
+    color: black;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+.angellist {
+    color: grey;
+}
+
+.icon-btn:hover {
+    transform: scale(1.10);
+    color: #FFFFFF;
+}
+
+.linkedin:hover {
+    background-color: #0077b5;
+}
+
+.angellist:hover {
+    background-color: grey;
+}
+
+.github:hover {
+    background-color: rgba(252, 245, 245, 0);
+}
+
+.page-title {
+    background-color: #e8eaea !important;
+    font-size: 50px;
+    text-align: center;
+    color: #333; /* Default text color */
+    padding: 20px; /* Add some padding for better spacing */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.page-title:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #007bff; /* Change background color on hover */
+}
+
+
+.center-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%; /* Adjust width for readability */
+    margin: auto; /* Center the div */
+    text-align: justify;
+}
+
+.center-text p {
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+    gap: 20px; /* Space between sections */
+}
+
+.education {
+    width: 50%; /* Equal width */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-list {
+    list-style-type: disc; /* Bullets for list */
+    padding-left: 40px; /* Adjust left padding for alignment */
+}
+
+.course-list li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+.about-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.about-box:hover, 
+.education:hover, 
+.skills-box:hover, 
+.project-box:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-box p, 
+.about-box ul li {
+    line-height: 2;
+    text-align: justify;
+}
+
+.category {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.category-items {
+    color: #333;
+    font-style: italic;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.skills-box {
+    width: 90%; /* Set width to 90% */
+    max-width: calc(90% - 40px); /* Optional: Adjust for padding */
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Center the box */
+}
+
+
+.skills-box:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skills-box h4 {
+    text-align: center;
+    color: #6a4;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.skills-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill-item span {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.project-box {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.project-box:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-box h4 {
+    color: #6a4;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.project-box a {
+    display: inline-block;
+    color: #fff;
+    background-color: #6a4;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-box a:hover {
+    background-color: #5a3;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.publications-section {
+    margin: 50px 0; /* Space above and below the section */
+}
+
+.publications-title {
+    text-align: center;
+    font-size: 2em; /* Title size */
+    color: #6a4; /* Color for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.publications-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a single column */
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between publication boxes */
+}
+
+.publication-box {
+    padding: 20px;
+    border: 2px solid #ccc; /* Border around publication boxes */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color for items */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s ease-in-out; /* Transition for hover effect */
+    width: 90%; /* Width of publication boxes */
+    max-width: 90%; /* Max width set to 90% of parent (page title) */
+}
+
+.publication-box:hover {
+    transform: scale(1.02); /* Scale effect on hover */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.publication-title {
+    font-size: 1.5em; /* Size of publication titles */
+    color: #333; /* Color for publication titles */
+    margin-bottom: 10px; /* Space below titles */
+}
+
+.publication-box p {
+    margin: 5px 0; /* Space between paragraphs */
+    line-height: 1.5; /* Line height for better readability */
+    color: #555; /* Color for paragraph text */
+}
+
+@media (max-width: 768px) {
+    .publications-container {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.achievement-box {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.achievement-box:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.achievement-box h4 {
+    color: #6a4;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.achievement-box p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.achievement-box a {
+    display: inline-block;
+    color: #fff;
+    background-color: #6a4;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.achievement-box a:hover {
+    background-color: #5a3;
+}
+
+@media (max-width: 768px) {
+    .achievements-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-section {
+    max-width: 1000px; /* Adjusted width for consistency */
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 15px;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 1.1em; /* Increase font size for better readability */
+}
+
+.contact-info i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #6a4; /* Same color as your button */
+}
+
+.contact-info a {
+    color: #6a4; /* Same color as your button */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
